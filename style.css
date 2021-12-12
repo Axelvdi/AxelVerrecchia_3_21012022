@@ -1,59 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Shrikhand&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Shrikhand&display=swap");
 body {
-    margin: 0;
-    font-family: "roboto", sans-serif;
-
+  margin: 0;
+  font-family: "roboto", sans-serif;
 }
 
 header {
-    font-family: "shrikhand", cursive;
-    text-align: center;
-    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-    padding: 0.5rem;
-    position: relative;
+  font-family: "shrikhand", cursive;
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
+  position: relative;
 }
 
 .city {
-    font-family: "roboto", sans-serif;
-    
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    padding: 1.25rem 1rem;
-    background-color: #f3f3f3;
-    font-size: 1.2rem;
-    
+  font-family: "roboto", sans-serif;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
 }
 
 .explore {
-    padding: 2rem;
-    text-align: center;
-    background-color: #fafafa;
+  padding: 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+.explore h2 {
+  margin: 0;
+}
+.explore button {
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.explore button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
-.explore-title {
-    margin: 0;
+.functioning {
+  counter-reset: steps;
+  padding: 2rem 1rem;
+}
+.functioning ol {
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 1000px) {
+  .functioning ol {
+    flex-direction: column;
+  }
+}
+.functioning li {
+  list-style-type: none;
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 1.4rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.functioning li:hover {
+  transform: scale(1.02);
+  background-color: #f5edff;
+}
+.functioning li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.functioning i.fas {
+  margin-right: 1rem;
+  color: #7e7e7e;
+  font-size: 1.3rem;
 }
 
-
-
-.explore-button  {
-    border: 0;
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-    font-size: 1.1rem;
-    border-radius: 100px;
-    color: #fff;
-    background-color: #686868;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-    cursor: pointer;
-    transition-duration: .25s;
-    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-}
-
-.explore-button:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,54 @@
+@use "../utils/box-shadow";
+@use "../utils/zoum";
+@use "../utils/color.scss";
+
+.functioning {
+    counter-reset: steps;
+    padding: 2rem 1rem;
+        & ol {
+            display: flex;
+            gap: 1rem;
+            @media (max-width:1000px){
+                flex-direction: column;
+            }
+                
+            
+        }
+        & li {
+
+            &:hover {
+                @include zoum.zoum;
+                background-color: #f5edff;
+            }
+            &::before {
+                content: counter(steps);
+                counter-increment: steps;
+                color: white;
+                background-color: color.$purple;
+                width: 2rem;
+                height: 2rem;
+                display: grid;
+                place-items: center;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 1rem;
+                left: -1rem;
+            }
+            list-style-type: none;
+            position: relative;
+            background-color: #f6f6f6;
+            padding: 1.4rem 2rem;
+            
+            flex-grow: 1;
+            border-radius: 1rem;
+            @include box-shadow.base-shadow;
+        }
+        & i.fas {
+            margin-right: 1rem;
+            color: color.$lightgrey;
+            font-size: 1.3rem;
+
+        }
+}
+
+  
