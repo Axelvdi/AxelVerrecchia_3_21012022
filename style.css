@@ -188,4 +188,21 @@ header {
   transform: translateY(-50%) scale(1.2);
 }
 
+footer {
+  background-color: #353535;
+  padding: 1rem 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "shrikhand", "sans-serif";
+  font-weight: 500;
+}
+footer p {
+  padding: 0.2rem;
+}
+footer i {
+  width: 1.2rem;
+  margin-right: 0.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */

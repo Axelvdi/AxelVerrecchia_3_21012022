@@ -1,0 +1,19 @@
+@use "../utils/color.scss";
+
+footer {
+    background-color: color.$darkgrey;
+    padding: 1rem 1rem 2rem;
+    color: white;
+        h2 {
+            font-family: "shrikhand", "sans-serif";
+            font-weight: 500;
+        }
+        p {
+            padding: 0.2rem;
+            
+        }
+        i {
+            width: 1.2rem;
+            margin-right: 0.5rem;   
+        }
+}
