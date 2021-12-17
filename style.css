@@ -5,6 +5,16 @@ body {
   font-family: "roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
 header {
   font-family: "shrikhand", cursive;
   text-align: center;
@@ -29,7 +39,11 @@ header {
   background-color: #fafafa;
 }
 .explore h2 {
-  margin: 0;
+  margin: 10px;
+}
+.explore p {
+  margin: 20px;
+  font-size: 17px;
 }
 .explore button {
   border: 0;
@@ -56,6 +70,7 @@ header {
 .functioning ol {
   display: flex;
   gap: 1rem;
+  margin: 30px 0 0 -25px;
 }
 @media (max-width: 1000px) {
   .functioning ol {
@@ -93,6 +108,84 @@ header {
   margin-right: 1rem;
   color: #7e7e7e;
   font-size: 1.3rem;
+}
+
+.restaurant {
+  background-color: #f6f6f6;
+}
+.restaurant h2 {
+  padding-top: 2rem;
+  margin: 1rem;
+}
+.restaurant .container-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 1rem;
+}
+@media (max-width: 1000px) {
+  .restaurant .container-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.restaurant .container-card .new {
+  position: relative;
+}
+.restaurant .container-card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+.restaurant .container-card img {
+  height: 12rem;
+  width: 100%;
+  border: 0 solid transparent;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
+  object-fit: cover;
+  background-size: cover;
+}
+.restaurant .card .card-description {
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  padding: 12px;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.restaurant .card .card-description h3,
+.restaurant .card .card-description p {
+  margin: 0.5;
+  padding: 2px;
+  font-size: 19px;
+}
+.restaurant .card .card-description h3 {
+  padding: 2px;
+}
+.restaurant .card .card-description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.restaurant .card .card-description .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
+}
+.restaurant .card .card-description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
 }
 
 /*# sourceMappingURL=style.css.map */
