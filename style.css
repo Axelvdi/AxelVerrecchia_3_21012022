@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&family=Shrikhand&display=swap");
+*,
+::before ::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "roboto", sans-serif;
@@ -10,9 +15,10 @@ a {
   color: inherit;
 }
 
-h3,
+h4 h3,
 p {
   margin: 0;
+  padding: 0;
 }
 
 header {
@@ -178,7 +184,6 @@ header {
 .restaurant .card .card-description .fas {
   color: transparent;
   background-clip: text;
-  -webkit-background-clip: text;
   opacity: 0;
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(0deg, #9356dc, #ff79da);
@@ -203,6 +208,210 @@ footer p {
 footer i {
   width: 1.2rem;
   margin-right: 0.5rem;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+header i {
+  position: absolute;
+  left: 2em;
+  top: 42px;
+}
+header .fas {
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.banner img {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.resto-main {
+  margin-top: -6rem;
+  border-radius: 2rem 1rem 0 0;
+  position: relative;
+}
+.resto-main i {
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.resto-main .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(0deg, #9356dc, #ff79da);
+}
+.resto-main:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+.resto-main h2 {
+  font-family: "shrikhand", "sans-serif";
+  padding: 2rem 1rem;
+  position: relative;
+  border-radius: 2rem 1rem 0 0;
+  background-color: #f6f6f6;
+  margin: 0;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  background-color: #f6f6f6;
+}
+@media (max-width: 1000px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+}
+.menu h3 {
+  margin: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.menu h3::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99E2D0;
+}
+.menu .menu-listing {
+  overflow: hidden;
+  padding: 4px;
+  background-color: #f6f6f6;
+}
+.menu .menu-items {
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 0.5rem;
+  animation: appear 1s;
+  animation-fill-mode: both;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.menu .menu-items:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menu .menu-items:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menu .menu-items:nth-child(4) {
+  animation-delay: 400ms;
+}
+.menu .menu-items .menu-description {
+  padding: 1rem;
+  overflow: hidden;
+}
+.menu .menu-items .menu-description h4,
+.menu .menu-items .menu-description p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 0;
+}
+.menu .menu-items .price {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+.menu .menu-items .menu-check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 0 1rem 1rem 0;
+  background-color: #99E2D0;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+.menu .menu-items .menu-check i {
+  display: grid;
+  place-items: center;
+  background: white;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  color: #99E2D0;
+}
+.menu .menu-items:hover {
+  cursor: pointer;
+}
+.menu .menu-items:hover .menu-check {
+  margin-right: 0;
+}
+.menu .menu-items:hover i {
+  animation: quarterspin 0.5s ease-in-out;
+}
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.order {
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+  background-color: #f6f6f6;
+}
+.order button {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fafafa;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.order button button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=style.css.map */
