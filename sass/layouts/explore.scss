@@ -67,7 +67,7 @@
 
 @-webkit-keyframes disappear {
     to {
-        -webkit-animation: scale(0);
+        transform: scale(0);
     }
 }
 

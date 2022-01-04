@@ -102,7 +102,7 @@ header {
 
 @-webkit-keyframes disappear {
   to {
-    -webkit-animation: scale(0);
+    transform: scale(0);
   }
 }
 @keyframes disappear {
