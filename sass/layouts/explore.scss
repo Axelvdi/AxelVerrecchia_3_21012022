@@ -64,23 +64,16 @@
     }
 }
 
-@keyframes disappear {
-    to {
-        transform: scale(0);
-    }
-}
 
 @-webkit-keyframes disappear {
     to {
         -webkit-animation: scale(0);
     }
 }
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
+
+@keyframes disappear {
+    to {
+        transform: scale(0);
     }
 }
 
@@ -90,5 +83,14 @@
     }
     100% {
         -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
