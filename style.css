@@ -194,6 +194,12 @@ header {
 .restaurant .container-card .new {
   position: relative;
 }
+
+.card-description {
+  margin: -3.5px 0px;
+}
+
+
 .restaurant .container-card .new::before {
   content: "Nouveau";
   position: absolute;
