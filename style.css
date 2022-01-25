@@ -224,7 +224,7 @@ header {
 }
 .restaurant .card .card-description h3,
 .restaurant .card .card-description p {
-  margin: 0.5;
+  margin: 0;
   padding: 2px;
   font-size: 19px;
 }
